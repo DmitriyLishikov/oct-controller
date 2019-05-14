@@ -24,3 +24,7 @@ Route::get('/tasks', 'TaskController@index')->name('tasks_index');
 Route::post('/tasks', 'TaskController@store')->name('tasks_store');
 
 Route::delete('/tasks/{task}', 'TaskController@destroy')->name('tasks_destroy');
+
+//данным роутом можно заменить выше стоящие роут
+//в HTML роуты должны быть с точкой вместо нижнего пробела
+Route::resource('news', 'NewsController');
